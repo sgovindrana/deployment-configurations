@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: userapp
-          image: govindrana/userinfo:latest
+          image: govindrana/userinfo:9
           imagePullPolicy: Always
           ports:
             - containerPort: 9093
