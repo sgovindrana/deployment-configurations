@@ -11,7 +11,7 @@
     rules:
       - http:
           paths:
-            - path: /eureka/*
+            - path: /
               pathType: Prefix
               backend:
                 service:
