@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: orderapp
-          image: govindrana/order:2
+          image: govindrana/order:3
           imagePullPolicy: Always
           ports:
             - containerPort: 9094
