@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: foodcatalogueapp
-          image: govindrana/foodcatalogue:14
+          image: govindrana/foodcatalogue:15
           imagePullPolicy: Always
           ports:
             - containerPort: 9092
