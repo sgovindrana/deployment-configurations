@@ -1,67 +1,98 @@
-Food Delivery Application
-This repository contains the full-stack Food Delivery Application, built using Microservices Architecture. The application provides users with an interactive platform for food ordering and restaurant browsing.
+# Food Delivery Application
 
-Technologies Used:
-Frontend: TypeScript, Angular 16
+**Food Delivery Application** is a full-stack application built using **Microservices Architecture**. It allows users to browse restaurants, place food orders, and manage deliveries. The application is developed with modern technologies and deployed on AWS for scalability and reliability.
 
-Backend: Java, Spring Boot, Microservices
+## Technologies Used
 
-Database: MySQL (RDS), MongoDB (Atlas, MongoCompass)
+- **Frontend**:  
+  - **TypeScript**, **Angular 16**, **HTML5**, **CSS3**
+  
+- **Backend**:  
+  - **Java 17**, **Spring Boot**, **Microservices**, **Hibernate**
+  
+- **Databases**:  
+  - **MySQL (RDS)**, **MongoDB (Atlas, MongoCompass)**
+  
+- **CI/CD**:  
+  - **Jenkins** (Continuous Integration), **SonarQube** (Code Quality), **ArgoCD** (Continuous Deployment)
+  
+- **Containerization & Orchestration**:  
+  - **Docker**, **Kubernetes (AWS EKS on EC2)**
 
-CI/CD: Jenkins, SonarQube, ArgoCD
+- **Cloud**:  
+  - **AWS (IAM, EC2, RDS, EKS)**
 
-Containerization & Orchestration: Docker, Kubernetes (AWS EKS)
+## Components
 
-Cloud: AWS (IAM, RDS, EC2, EKS)
+### Frontend
 
-Overview
-The application is developed using Microservices, where each service is independently deployable and communicates with other services. The services are containerized using Docker and deployed on AWS Kubernetes (EKS) for efficient scaling and orchestration. The application follows a CI/CD pipeline, where Jenkins is used for continuous integration, SonarQube is integrated for code quality analysis, and ArgoCD is used for deployment automation.
+The **Frontend** component is built using **Angular** and **TypeScript**, providing an interactive user interface for:
 
-Deployment & Configuration
-All microservices are deployed using AWS EKS and configured for high availability and fault tolerance. The Eureka service acts as the service registry, enabling seamless communication between microservices.
+- Browsing restaurants and menus.
+- Placing and tracking orders.
+- Managing user profiles and payment methods.
 
-For deployment configurations, refer to the Deployment Configuration Guide.
+### Backend
 
-Screenshots
-Microservice Registered on Eureka
+The **Backend** consists of several **Microservices** developed using **Java Spring Boot**, including:
 
-This screenshot shows the registered microservices on Eureka, deployed on AWS Kubernetes.
+- **Food Catalogue Service**: Manages food items and restaurant information.
+- **Order Service**: Handles order placements, status updates, and delivery tracking.
+- **User Service**: Manages user profiles, authentication, and authorization.
 
-Jenkins CI Pipeline
+### Microservices & Deployment
 
-This screenshot shows the Jenkins CI pipeline running the build and tests.
+The application is designed with **Microservices Architecture** and deployed on **AWS Kubernetes (EKS)**, ensuring scalability and high availability. 
 
-SonarQube Code Quality Report
+- **Eureka Service** for service discovery and registration.
+- **Docker** is used for containerizing microservices.
+- **Jenkins** is used for the **CI pipeline** to automate the build and test process.
+- **ArgoCD** is used for **CD** to automate the deployment of the microservices on AWS.
 
-This screenshot shows the code quality report from SonarQube.
+## Deployment & Configuration
 
-ArgoCD Deployment on AWS
+The application is deployed using **AWS EKS** and uses **Eureka** for service discovery. For detailed deployment steps, refer to the [Deployment Configuration Guide](insert-deployment-config-link-here).
 
-This screenshot shows the ArgoCD dashboard with the deployed microservices on AWS EKS.
+### Deployment Flow:
+1. **Microservices** are developed and containerized using **Docker**.
+2. **Jenkins** runs the CI pipeline for building, testing, and analyzing code quality.
+3. **ArgoCD** automates the deployment of services on **AWS EKS**.
+4. Services are registered on **Eureka** for efficient inter-service communication.
 
-Getting Started
-Prerequisites
-Node.js and Angular CLI for the frontend
+## Screenshots
 
-Java 17+ and Spring Boot for the backend
+### 1. **Microservices Registered on Eureka**  
+![Eureka Service](insert-screenshot-url-here)  
+*This screenshot shows the registered microservices on Eureka, deployed on AWS Kubernetes (EKS).*
 
-Docker for containerizing the application
+### 2. **Jenkins CI Pipeline**  
+![Jenkins Pipeline](insert-screenshot-url-here)  
+*This screenshot shows the Jenkins CI pipeline running the build, tests, and SonarQube code analysis.*
 
-Kubernetes (AWS EKS) for orchestration
+### 3. **SonarQube Code Quality Report**  
+![SonarQube](insert-screenshot-url-here)  
+*This screenshot shows the code quality report generated by SonarQube.*
 
-Installation
-Clone the repository:
+### 4. **ArgoCD Deployment on AWS**  
+![ArgoCD](insert-screenshot-url-here)  
+*This screenshot shows the ArgoCD dashboard with the deployed microservices on AWS EKS.*
 
-bash
-Copy
-git clone https://github.com/sgovindrana/food-delivery-application
-Set up the frontend:
+## Getting Started
 
-bash
-Copy
-cd food-delivery-application-fe
-npm install
-ng serve
-Set up the backend microservices by navigating to each service directory and following the individual setup instructions.
+Follow these instructions to set up and run the application locally or deploy it on AWS.
 
-Deploy the application on AWS EKS using Kubernetes configurations.
+### Prerequisites
+
+Before you begin, ensure that the following tools and services are available:
+- **Node.js** and **Angular CLI** for frontend development.
+- **Java 17+** and **Spring Boot** for backend development.
+- **Docker** for containerizing the application.
+- **Kubernetes (AWS EKS)** for container orchestration.
+- **AWS CLI** and **kubectl** for deployment.
+- **Jenkins**, **SonarQube**, **ArgoCD** for CI/CD and code quality.
+
+### Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/sgovindrana/food-delivery-application
