@@ -1,6 +1,6 @@
 # Food Delivery Application
 
-**Food Delivery Application** is a full-stack application built using **Microservices Architecture**. It allows users to browse restaurants, place food orders, and manage deliveries. The application is developed with modern technologies and deployed on AWS for scalability and reliability.
+**Food Delivery Application** is a full-stack application built using **Microservices Architecture**. It allows users to browse restaurants and menus, add multiple items to the food catalogue cart, and place food orders, receiving a successful order confirmation dialogue. The application is developed using modern technologies and deployed on AWS for enhanced scalability and reliability.
 
 ## Technologies Used
 
@@ -28,19 +28,19 @@
 
 The **Frontend** component is built using **Angular**, **TypeScript** & **JavaScript** providing an interactive user interface for:
 
-- Browsing restaurants and menus.
-- Placing and tracking orders.
-- Managing user profiles and payment methods.
+- Browse restaurants and view menus to explore food options.
+- Add multiple items to the food catalogue cart for easy order management.
+- Place an order and receive a successful order confirmation dialogue upon completion.
 
 ### Backend
 
 The **Backend** consists of several **Microservices** developed using **Java Spring Boot**, including:
 
 - **Food Catalogue Service**: Manages food items and restaurant information.
-- **Order Service**: Handles order placements, status updates, and delivery tracking.
+- **Order Service**: Handles order placements, status updates, save order in MongoDB.
 - **User Service**: Manages user profiles, authentication, and authorization.
-- **Restaurant Listing Service**: Manages restaurant data, including listing details and search functionality.
-
+- **Restaurant Listing Service**: Manages restaurant data, including listing details.
+  
 ### Microservices & Deployment
 
 The application is designed with **Microservices Architecture** and deployed on **AWS Kubernetes (EKS)**, ensuring scalability and high availability. 
@@ -82,25 +82,54 @@ The application is deployed using **AWS EKS** and uses **Eureka** for service di
 
 ### 5 **Final Application**
 ![Screenshot 2025-04-17 at 5 20 59 PM](https://github.com/user-attachments/assets/dac9a3d2-3368-44d1-9d4f-99a92b90c233)
+-----------------------------------------------------------------------------------------------------------------------------------
 
+### Other Miscellaneous Screenshots
 
+### Junit Test Case ( Code Coverage More Than 80% )
+*This screenshot shows the Multiple Junit Test Cases with Code Coverage more than 80%.*
+![Screenshot 2025-04-29 at 4 28 39 PM](https://github.com/user-attachments/assets/dc46802d-a6f2-460f-840b-978e0e7cbb68)
 
-## Getting Started
+### Docker Hub 
+*This screenshot shows the Multiple Docker Images with their Latesh Version.*
+![Screenshot 2025-05-01 at 6 49 31 PM](https://github.com/user-attachments/assets/f034a452-c30c-4663-ad6e-c01bfd20dce9)
 
-Follow these instructions to set up and run the application locally or deploy it on AWS.
+-----------------------------------------------------------------------------------------------------------------------------------
 
-### Prerequisites
+   
+## Getting Started
+----
+Follow the steps below to set up and run the project locally **or** deploy it on AWS.
 
-Before you begin, ensure that the following tools and services are available:
-- **Node.js** and **Angular CLI** for frontend development.
-- **Java 17+** and **Spring Boot** for backend development.
-- **Docker** for containerizing the application.
-- **Kubernetes (AWS EKS)** for container orchestration.
-- **AWS CLI** and **kubectl** for deployment.
-- **Jenkins**, **SonarQube**, **ArgoCD** for CI/CD and code quality.
+## Prerequisites
+----
+- **Node.js** & **Angular CLI** – build / run the frontend  
+- **Java 17 +** & **Spring Boot** – develop the backend microservices  
+- **Docker** – containerise services  
+- **Kubernetes (AWS EKS)** – orchestrate containers  
+- **AWS CLI** & **kubectl** – manage AWS and your EKS cluster  
+- **Jenkins** – continuous integration  
+- **SonarQube** – static code analysis  
+- **ArgoCD** – continuous deployment
 
-### Installation
+## Installation
+----
+1. Clone this repository to your local machine.
+2. Install the project dependencies using `npm install`.
+3. Run the project locally using `ng serve`.
+4. Access the application in your web browser at [http://localhost:4200].
 
-1. Clone this repository:
-   ```bash
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+1. Fork the repository.
+2. Make your changes and improvements.
+3. Raise a Pull Request (PR) with a clear explanation of your changes.
+4. Contact the project maintainer, Govind Rana (s.govindrana@gmail.com), for PR approval.
+
+## Contact
+
+For questions or inquiries, please contact Govind Rana at s.govindrana@gmail.com.
+
+Thank you for using the Food Delivery Application!
    git clone https://github.com/sgovindrana/food-delivery-application
