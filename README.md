@@ -5,7 +5,7 @@
 ## Technologies Used
 
 - **Frontend**:  
-  - **TypeScript**, **Angular 16**, **HTML5**, **CSS3**
+  - **Angular 16**, **TypeScript**,  **Javacript**, **HTML5**, **CSS3**
   
 - **Backend**:  
   - **Java 17**, **Spring Boot**, **Microservices**, **Hibernate**
@@ -26,7 +26,7 @@
 
 ### Frontend
 
-The **Frontend** component is built using **Angular** and **TypeScript**, providing an interactive user interface for:
+The **Frontend** component is built using **Angular**, **TypeScript** & **JavaScript** providing an interactive user interface for:
 
 - Browsing restaurants and menus.
 - Placing and tracking orders.
@@ -39,6 +39,7 @@ The **Backend** consists of several **Microservices** developed using **Java Spr
 - **Food Catalogue Service**: Manages food items and restaurant information.
 - **Order Service**: Handles order placements, status updates, and delivery tracking.
 - **User Service**: Manages user profiles, authentication, and authorization.
+- **Restaurant Listing Service**: Manages restaurant data, including listing details and search functionality.
 
 ### Microservices & Deployment
 
