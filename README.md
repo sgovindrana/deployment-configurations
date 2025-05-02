@@ -1,7 +1,6 @@
 # Food Delivery Application
 
 **Food Delivery Application** is a full-stack application built using **Microservices Architecture**. It allows users to browse restaurants and menus, add multiple items to the food catalogue cart, and place food orders, receiving a successful order confirmation dialogue. The application is developed using modern technologies and deployed on AWS for enhanced scalability and reliability.
------------------------------------------------------------------------------------------------------------------------------------
 
 ## Technologies Used
 
@@ -152,5 +151,4 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 For questions or inquiries, please contact Govind Rana at s.govindrana@gmail.com.
 
-Thank you for using the Food Delivery Application!
-   git clone https://github.com/sgovindrana/food-delivery-application
+Thank you for using the Food Delivery Application ! :)
