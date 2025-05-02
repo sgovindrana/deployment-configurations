@@ -1,6 +1,7 @@
 # Food Delivery Application
 
 **Food Delivery Application** is a full-stack application built using **Microservices Architecture**. It allows users to browse restaurants and menus, add multiple items to the food catalogue cart, and place food orders, receiving a successful order confirmation dialogue. The application is developed using modern technologies and deployed on AWS for enhanced scalability and reliability.
+-----------------------------------------------------------------------------------------------------------------------------------
 
 ## Technologies Used
 
@@ -21,6 +22,7 @@
 
 - **Cloud**:  
   - **AWS (IAM, EC2, RDS, EKS)**
+-----------------------------------------------------------------------------------------------------------------------------------
 
 ## Components
 
@@ -51,15 +53,33 @@ The application is designed with **Microservices Architecture** and deployed on 
 - **Docker** is used for containerizing microservices.
 - **Jenkins** is used for the **CI pipeline** to automate the build and test process.
 - **ArgoCD** is used for **CD** to automate the deployment of the microservices on AWS.
-
+-----------------------------------------------------------------------------------------------------------------------------------
 ## Deployment & Configuration
 - **Deployment Configurations**: Orchestrates end-to-end CI/CD—on each code push, Jenkins runs the build, increments the app version, builds & pushes new Docker images to ECR, commits updated Kubernetes manifests (with the new image tag) into this repo, and ArgoCD continuously monitors and syncs these changes to AWS EKS. [GitHub Repo](https://github.com/sgovindrana/deployment-configurations)
 
-### Deployment Flow:
-1. **Microservices** are developed and containerized using **Docker**.
-2. **Jenkins** runs the CI pipeline for building, testing, and analyzing code quality.
-3. **ArgoCD** automates the deployment of services on **AWS EKS**.
-4. Services are registered on **Eureka** for efficient inter-service communication.
+## Deployment Flow
+----
+1. **Code Commit**  
+   - Push to any service repo triggers the Jenkins pipeline defined in the  
+     [deployment‑configurations](https://github.com/sgovindrana/deployment-configurations) repo.  
+2. **Build Stage**  
+   - Compile sources  
+   - Execute **JUnit** unit / integration tests  
+3. **Quality Gate**  
+   - Run **SonarQube** static analysis  
+   - Pipeline continues only if all quality gates pass  
+4. **Containerization**  
+   - Build a version‑bumped Docker image  
+   - Push the image to **Amazon ECR**  
+5. **Manifest Update & Commit**  
+   - Inject the new image tag into Kubernetes YAMLs  
+   - Commit the updated manifests back to the *deployment‑configurations* repo  
+6. **Continuous Deployment**  
+   - **ArgoCD** detects the commit and syncs the manifests  
+   - Performs a zero‑downtime rolling update on **AWS EKS** (EC2 worker nodes)  
+7. **Service Discovery**  
+   - Fresh pods start and automatically register with **Eureka** for seamless inter‑service communication  
+-----------------------------------------------------------------------------------------------------------------------------------
 
 ## Screenshots
 
