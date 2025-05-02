@@ -8,7 +8,7 @@
   - **Angular 16**, **TypeScript**,  **Javacript**, **HTML5**, **CSS3**
   
 - **Backend**:  
-  - **Java 17**, **Spring Boot**, **Microservices**, **Hibernate**
+  - **Java 17**, **Spring Boot**, **Microservices**, **Hibernate**, **Junit Test Case (Code Coverage > 80%)**
   
 - **Databases**:  
   - **MySQL (RDS)**, **MongoDB (Atlas, MongoCompass)**
@@ -27,6 +27,7 @@
 ### Frontend
 
 The **Frontend** component is built using **Angular**, **TypeScript** & **JavaScript** providing an interactive user interface for:
+[GitHub Repo](https://github.com/sgovindrana/food-delivery-application-fe)
 
 - Browse restaurants and view menus to explore food options.
 - Add multiple items to the food catalogue cart for easy order management.
@@ -36,10 +37,11 @@ The **Frontend** component is built using **Angular**, **TypeScript** & **JavaSc
 
 The **Backend** consists of several **Microservices** developed using **Java Spring Boot**, including:
 
-- **Food Catalogue Service**: Manages food items and restaurant information.
-- **Order Service**: Handles order placements, status updates, save order in MongoDB.
-- **User Service**: Manages user profiles, authentication, and authorization.
-- **Restaurant Listing Service**: Manages restaurant data, including listing details.
+- **Eureka Service**: Service registry & discovery. [GitHub Repo](https://github.com/sgovindrana/eureka-service)  
+- **Food Catalogue Service**: Manages food items & restaurant info. [GitHub Repo](https://github.com/sgovindrana/food-catalogue-microservice)  
+- **Order Service**: Handles order placement, status updates & saves orders in MongoDB. [GitHub Repo](https://github.com/sgovindrana/order-microservice)  
+- **User Service**: Manages user profiles and supports adding food items to the user’s cart. [GitHub Repo] [GitHub Repo](https://github.com/sgovindrana/userinfo-microservice)  
+- **Restaurant Listing Service**: Manages restaurant data & listing details. [GitHub Repo](https://github.com/sgovindrana/restaurant-listing-microservice)  
   
 ### Microservices & Deployment
 
@@ -51,8 +53,7 @@ The application is designed with **Microservices Architecture** and deployed on 
 - **ArgoCD** is used for **CD** to automate the deployment of the microservices on AWS.
 
 ## Deployment & Configuration
-
-The application is deployed using **AWS EKS** and uses **Eureka** for service discovery. For detailed deployment steps, refer to the [Deployment Configuration Guide](insert-deployment-config-link-here).
+- **Deployment Configurations**: Orchestrates end-to-end CI/CD—on each code push, Jenkins runs the build, increments the app version, builds & pushes new Docker images to ECR, commits updated Kubernetes manifests (with the new image tag) into this repo, and ArgoCD continuously monitors and syncs these changes to AWS EKS. [GitHub Repo](https://github.com/sgovindrana/deployment-configurations)
 
 ### Deployment Flow:
 1. **Microservices** are developed and containerized using **Docker**.
@@ -63,7 +64,7 @@ The application is deployed using **AWS EKS** and uses **Eureka** for service di
 ## Screenshots
 
 ### 1. **Microservices Registered on Eureka**  
-*This screenshot shows the registered microservices on Eureka, deployed on AWS Kubernetes (EKS).*
+*This screenshot shows the registered microservices on Eureka, deployed on **AWS EKS (EC2 worker nodes)**.
 ![Screenshot 2025-05-01 at 6 46 55 PM](https://github.com/user-attachments/assets/6d62826c-a89c-4818-aabd-9e1ae432509f)
 
 ### 2. **Jenkins CI Pipeline**  
@@ -77,7 +78,7 @@ The application is deployed using **AWS EKS** and uses **Eureka** for service di
 
 
 ### 4. **ArgoCD Deployment on AWS**  
-*This screenshot shows the ArgoCD dashboard with the deployed microservices on AWS EKS.*
+*This screenshot shows the registered microservices on Eureka, deployed on **AWS EKS (EC2 worker nodes)**.
 ![Screenshot 2025-04-30 at 6 12 49 PM](https://github.com/user-attachments/assets/ebd4df9c-6904-4173-a3a5-cb0eb897688c)
 
 ### 5 **Final Application**
