@@ -1,4 +1,4 @@
-# Food Delivery Application
+![Screenshot 2025-05-01 at 6 46 55 PM](https://github.com/user-attachments/assets/7c701166-4d2d-4348-892f-3a6c600fe033)# Food Delivery Application
 
 **Food Delivery Application** is a full-stack application built using **Microservices Architecture**. It allows users to browse restaurants, place food orders, and manage deliveries. The application is developed with modern technologies and deployed on AWS for scalability and reliability.
 
@@ -63,8 +63,8 @@ The application is deployed using **AWS EKS** and uses **Eureka** for service di
 ## Screenshots
 
 ### 1. **Microservices Registered on Eureka**  
-![Eureka Service](insert-screenshot-url-here)  
 *This screenshot shows the registered microservices on Eureka, deployed on AWS Kubernetes (EKS).*
+![Screenshot 2025-05-01 at 6 46 55 PM](https://github.com/user-attachments/assets/6d62826c-a89c-4818-aabd-9e1ae432509f)
 
 ### 2. **Jenkins CI Pipeline**  
 ![Jenkins Pipeline](insert-screenshot-url-here)  
